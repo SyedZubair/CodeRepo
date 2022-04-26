@@ -1,0 +1,8 @@
+//From Developer Consolde
+//Goto Debug menu from the top bar and click on the 'Open Execute Window' button to execute
+
+
+//Create the instance of the batch class
+AccountBatch abc = new AccountBatch();
+//Exceute using the executeBatch method from Database methods
+Database.executeBatch(abc);
