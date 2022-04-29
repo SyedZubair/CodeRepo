@@ -1,0 +1,32 @@
+	1. Backend 
+		a. Apex Programming
+			i. Controllers - Completed
+			ii. Interfaces
+			iii. Trigger - Completed
+		
+		b. Asynch Processing  ----> action doing the job, no expectation on the response
+			i. Batch Apex  --> Bulk data processing (2M in a batch manner, Sending the notification during given time (~8PM IST), Send the batch data to 3rd party
+			ii. Future Method --> 1. Execute when the resources are available, 2. make a callout 
+			iii. Queueable Apex --> Channing of the job 
+			iv. Scheduler --> to schedule job in given period of time (4 am)
+
+		c. Apex Testing - Lines of code to be tested before we deploy to higher environments
+		 
+	2. UI - User Interface (Mobile And Web)
+		a. Visual Force Pages
+		b. Visualforce Components
+		c. Aura Component
+		d. Lightning Web Component
+		e. Sites - Optional
+
+	3. Integration 
+		a. REST - JSON, light weight integration (Mobile App)
+		b. SOAP - XML, Heavy weight (Huge data)
+		c. Webservices - (Exposing to out side world)
+
+	4. Deployments 
+
+	5. Miscellaneous - 
+		a. Large scale application
+		b. Health of Salesforce app
+Enhancements & Quarterly Releases
