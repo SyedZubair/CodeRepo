@@ -8,6 +8,10 @@
       
 How to execute Scheduler?
 Setup -> Quick Find -> Apex Classes --> Click on Schedule Apex Button
-Enter the Name of the job
+1. Enter the Name of the job
+2. Select the Schedule Class
+3. Add the Frequency
+4. Click on Save
 
-
+Where to view the Scheduled Job?
+Setup -> Quick Find -> Scheduled Jobs --> View your apex class
