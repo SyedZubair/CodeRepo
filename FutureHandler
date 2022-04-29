@@ -1,0 +1,26 @@
+public class FutureHandler {
+    
+    //future method
+    //it is method doing is processing of the async things in background, 
+    //when the resources are available
+    //
+    //Batch    	Executing 1Mn (2hrs)
+    //Queueable Executing 50K (3 hrs)
+    //Future - Waits until the resources are free (after 5hrs)
+
+    @future
+    public static void processContactCreation(){
+        //logic to perform processing
+        List<Account> accountList = Database.query('Select Id, Name from Account where Private__c=false');
+        for(Account act: accountList){
+            act.Private__c = true;
+        }
+        
+        update accountList;
+        
+        
+        
+        
+    }
+    
+}
