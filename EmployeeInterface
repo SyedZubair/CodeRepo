@@ -1,0 +1,11 @@
+public interface EmployeeClass {
+    
+    
+    void doDisplay();
+    
+    
+    void pay();
+    void performance();
+    void leave();
+
+}
