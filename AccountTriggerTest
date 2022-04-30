@@ -1,0 +1,46 @@
+@isTest(SeeAllData = false)
+public class AccountTriggerTest {
+
+    //3 things
+    //1. Setup the virtual data
+    //2. Proper testing (Positive, Negative, Load/Stress)
+    //3. Assertion should be in place
+    //
+   
+    //1. Setup the virtual data
+    @testSetup
+    static void testData(){
+        //Here I will create the virtual data
+        Account acc = new Account (Name = 'Uday', Active__c ='Yes', Match_Billing_Address__c = true, ShippingPostalCode = '234567');
+        insert acc;
+    }
+    
+    //2. Proper testing (Positive, Negative, Load/Stress)
+    @isTest
+    static void testPositive(){
+        List<Account> virAccount = [Select Id, Name, Active__c from Account];
+        system.debug('Inside Virtual Account list: '+virAccount);
+        
+        for(Account acc: virAccount){
+            acc.Active__c = 'No';
+        }
+        
+        Test.startTest();
+        
+        try{
+            update virAccount;
+        }catch(Exception ex){
+            //3. Assertion should be in place
+            system.debug('Exception: '+ex.getMessage());
+            system.assertNotEquals('', ex.getMessage());
+        }
+        
+        
+        //Once DML is done this is the result
+        system.assertNotEquals('Yes', virAccount[0].Active__c);
+        system.assertEquals(1, virAccount.size());
+        
+        Test.stopTest();
+    }
+    
+}
