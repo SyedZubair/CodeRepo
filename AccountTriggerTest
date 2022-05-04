@@ -11,8 +11,17 @@ public class AccountTriggerTest {
     @testSetup
     static void testData(){
         //Here I will create the virtual data
-        Account acc = new Account (Name = 'Uday', Active__c ='Yes', Match_Billing_Address__c = true, ShippingPostalCode = '234567');
-        insert acc;
+        //200 Records
+        List<Account> newAccountList = new List<Account>{};
+            
+            for(Integer i =0; i<200; i++){
+                Account acc = new Account (Name = 'Uday '+i, Active__c ='Yes', Match_Billing_Address__c = true, ShippingPostalCode = '234567'+i);
+                newAccountList.add(acc);
+            }
+        
+        insert newAccountList;     
+       
+        
     }
     
     //2. Proper testing (Positive, Negative, Load/Stress)
@@ -38,7 +47,7 @@ public class AccountTriggerTest {
         
         //Once DML is done this is the result
         system.assertNotEquals('Yes', virAccount[0].Active__c);
-        system.assertEquals(1, virAccount.size());
+        system.assertEquals(200, virAccount.size());
         
         Test.stopTest();
     }
@@ -58,7 +67,8 @@ public class AccountTriggerTest {
         //Test Scenario 3 - Passing Null & empty Values to the method
         AccountTriggerHandler.validateAccountActive(triggerOldMap, null);
         
-        AccountTriggerHandler.captureBillingPostalCode(null);
+        //Uday to handle the null scenario
+        //AccountTriggerHandler.captureBillingPostalCode(null);
         
     }
     
