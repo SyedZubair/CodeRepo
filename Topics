@@ -1,16 +1,16 @@
- 	1. Backend 
+	1. Backend 
 		a. Apex Programming
 			i. Controllers - Completed
 			ii. Interfaces - Completed
 			iii. Trigger - Completed
 		
 		b. Asynch Processing  ----> action doing the job, no expectation on the response
-			i. Batch Apex  - Completed --> Bulk data processing (2M in a batch manner, Sending the notification during given time (~8PM IST), Send the batch data to 3rd party
-			ii. Future Method  - Completed --> 1. Execute when the resources are available, 2. make a callout 
-			iii. Queueable Apex  - Completed --> Channing of the job 
-			iv. Scheduler  - Completed --> to schedule job in given period of time (4 am)
+			i. Batch Apex - Completed   --> Bulk data processing (2M in a batch manner, Sending the notification during given time (~8PM IST), Send the batch data to 3rd party
+			ii. Future Method - Completed --> 1. Execute when the resources are available, 2. make a callout 
+			iii. Queueable Apex - Completed --> Channing of the job 
+			iv. Scheduler - Completed --> to schedule job in given period of time (4 am)
 
-		c. Apex Testing  - In Progress - Lines of code to be tested before we deploy to higher environments
+		c. Apex Testing - Completed - Lines of code to be tested before we deploy to higher environments
 		 
 	2. UI - User Interface (Mobile And Web)
 		a. Visual Force Pages
@@ -29,4 +29,4 @@
 	5. Miscellaneous - 
 		a. Large scale application
 		b. Health of Salesforce app
-		c. Enhancements & Quarterly Releases
+Enhancements & Quarterly Releases
