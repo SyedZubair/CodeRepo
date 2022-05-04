@@ -43,4 +43,23 @@ public class AccountTriggerTest {
         Test.stopTest();
     }
     
+    @isTest
+    static void testNegative(){
+        //Would be testing the negative of actual logic
+        //Test Scenario 1 - Passing Null Values to the method
+        AccountTriggerHandler.validateAccountActive(null, null);
+        
+        //Test Scenario 2 - Passing empty Values to the method
+        //Old and new empty map
+        Map<Id, Account> triggerOldMap = new Map<Id, Account>{};
+            Map<Id, Account> triggerNewMap = new Map<Id, Account>{};
+        AccountTriggerHandler.validateAccountActive(triggerOldMap, triggerNewMap);
+        
+        //Test Scenario 3 - Passing Null & empty Values to the method
+        AccountTriggerHandler.validateAccountActive(triggerOldMap, null);
+        
+        AccountTriggerHandler.captureBillingPostalCode(null);
+        
+    }
+    
 }
